@@ -66,7 +66,7 @@ DeviceProcessEvents
 
 ### 3. Searched the `DeviceProcessEvents` Table for TOR Browser Execution
 
-Searched for any indication that the user "employee" actually opened the TOR browser. There was evidence that they did open it at `2024-11-08T22:17:21.6357935Z`. There were several other instances of `firefox.exe` (TOR) as well as `tor.exe` spawned afterward.
+Searched for any indication that the user "employee" actually opened the TOR browser. There was evidence that they did open it at `2026-06-25T21:17:22.0000036Z`. There were several other instances of `firefox.exe` (TOR) as well as `tor.exe` spawned afterward.
 
 **Query used to locate events:**
 
@@ -106,7 +106,7 @@ DeviceNetworkEvents
 
 ### 1. File Download - TOR Installer
 
-- **Timestamp:** `2024-11-08T22:14:48.6065231Z`
+- **Timestamp:** `2026-06-25T21:17:22.0000036Z`
 - **Event:** The user "employee" downloaded a file named `tor-browser-windows-x86_64-portable-14.0.1.exe` to the Downloads folder.
 - **Action:** File download detected.
 - **File Path:** `C:\Users\employee\Downloads\tor-browser-windows-x86_64-portable-14.0.1.exe`
