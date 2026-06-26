@@ -90,14 +90,15 @@ Searched for any indication the TOR browser was used to establish a connection u
 
 ```kql
 DeviceNetworkEvents  
-| where DeviceName == "darideivi-labs"
-| where FileName contains "tor"
-| where InitiatingProcessAccountName == "david"
-| where Timestamp >= datetime(2026-06-25T21:17:22.0000036Z)
+| where DeviceName == "darideivi-labs"  
+| where InitiatingProcessAccountName != "system"  
+| where InitiatingProcessFileName in ("tor.exe", "firefox.exe")  
+| where RemotePort in ("9001", "9030", "9040", "9050", "9051", "9150", "80", "443")  
+| project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName, InitiatingProcessFolderPath  
 | order by Timestamp desc
-| project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account = InitiatingProcessAccountName 
 ```
-<img width="1212" alt="image" src="https://github.com/user-attachments/assets/87a02b5b-7d12-4f53-9255-f5e750d0e3cb">
+<img width="1404" alt="image" src="https://github.com/user-attachments/assets/00f744a1-6070-4ea8-b61a-47e2afb10082" />
+
 
 ---
 
